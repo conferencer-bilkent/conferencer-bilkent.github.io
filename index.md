@@ -27,7 +27,7 @@ At Conferencer, we believe in empowering academic organizers with a seamless, in
 ---
 
 ## Team
-- **Abdurrahman Bilal Kar:** [GitHub](https://github.com/abilalkar)   
+- **Abdurrahman Bilal Kar:** [GitHub](https://github.com/abilalkar) [Logbook]([https://github.com/abilalkar](https://docs.google.com/document/d/1tvbA_a8OFBS25H6mmW2rgRJPnKD4thqJQN4Bayte7iM/edit?usp=sharing)) 
 - **Ahmet Memduh Tutuş:** [GitHub](https://github.com/memduhtutus) 
 - **Atilla Emre Söylemez:** [GitHub](https://github.com/At1llaes22) 
 - **Berkay Ayçiçek:** [GitHub](https://github.com/brkye)
