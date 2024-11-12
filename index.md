@@ -1,4 +1,4 @@
----
+<img width="187" alt="image" src="https://github.com/user-attachments/assets/a1169b17-e613-4723-8617-8ee0c35b39c5">---
 layout: default
 title: "Conferencer"
 ---
@@ -29,7 +29,7 @@ At Conferencer, we believe in empowering academic organizers with a seamless, in
 ## Team
 - **Abdurrahman Bilal Kar:** [GitHub](https://github.com/abilalkar) [Logbook](https://docs.google.com/document/d/1tvbA_a8OFBS25H6mmW2rgRJPnKD4thqJQN4Bayte7iM/edit?usp=sharing)
 - **Ahmet Memduh Tutuş:** [GitHub](https://github.com/memduhtutus) [Logbook](https://docs.google.com/document/d/1RLuLGbGP9tq8x2x4JN0-rEbsMUVBQWjykxkwLvANRtM/edit?usp=sharing)
-- **Atilla Emre Söylemez:** [GitHub](https://github.com/At1llaes22) 
+- **Atilla Emre Söylemez:** [GitHub](https://github.com/At1llaes22) [Logbook](https://docs.google.com/document/d/1bNkmu5djHaaG9sipRPZrShTFjT25p-enPCtM-9O3fy4/edit?usp=sharing)
 - **Berkay Ayçiçek:** [GitHub](https://github.com/brkye)
 
 ---
