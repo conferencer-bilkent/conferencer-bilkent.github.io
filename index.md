@@ -1,4 +1,3 @@
-<img width="187" alt="image" src="https://github.com/user-attachments/assets/a1169b17-e613-4723-8617-8ee0c35b39c5">---
 layout: default
 title: "Conferencer"
 ---
