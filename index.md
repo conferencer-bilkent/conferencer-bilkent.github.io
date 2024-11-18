@@ -35,7 +35,7 @@ At Conferencer, we believe in empowering academic organizers with a seamless, in
 ---
     
 ## Deliverables
-- 📜 [Project Information Form](assets/Paper-Citadel_Project_Information_Form.docx)
+- 📚 [Project Information Form](assets/Paper-Citadel_Project_Information_Form.docx)
 
 
 ---
