@@ -30,7 +30,7 @@ At Conferencer, we believe in empowering academic organizers with a seamless, in
 - **Abdurrahman Bilal Kar:** [GitHub](https://github.com/abilalkar) [Logbook](https://docs.google.com/document/d/1tvbA_a8OFBS25H6mmW2rgRJPnKD4thqJQN4Bayte7iM/edit?usp=sharing)
 - **Ahmet Memduh Tutuş:** [GitHub](https://github.com/memduhtutus) [Logbook](https://docs.google.com/document/d/1RLuLGbGP9tq8x2x4JN0-rEbsMUVBQWjykxkwLvANRtM/edit?usp=sharing)
 - **Atilla Emre Söylemez:** [GitHub](https://github.com/At1llaes22) [Logbook](https://docs.google.com/document/d/1bNkmu5djHaaG9sipRPZrShTFjT25p-enPCtM-9O3fy4/edit?usp=sharing)
-- **Berkay Ayçiçek:** [GitHub](https://github.com/brkye)
+- **Berkay Ayçiçek:** [GitHub](https://github.com/brkye) [Logbook](https://docs.google.com/document/d/1PBVK1BPU3sIirE2HYDI7CidOOuJ1UpTuBsUUFxfyN68/edit?usp=sharing)
 
 ---
     
