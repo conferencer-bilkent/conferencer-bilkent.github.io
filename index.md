@@ -36,7 +36,10 @@ At Conferencer, we believe in empowering academic organizers with a seamless, in
     
 ## Deliverables
 - 📚 [Project Information Form](assets/Paper-Citadel_Project_Information_Form.docx)
-
+- 📚 [Project Specification Report](assets/T2409-Project_Specification_Document.pdf)
+- 📚 [Analysis Requirement Report](assets/T2409-Analysis_Requirement_Report.pdf)
+- 📚 [Detailed Design Report](assets/T2409-Detailed_Design_Report.pdf)
+- 📚 [Final Report](assets/T2409-Final_Report.pdf)
 
 ---
 
