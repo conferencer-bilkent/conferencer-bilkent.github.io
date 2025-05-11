@@ -2,44 +2,36 @@
 <html>
 <head>
     <title>ConferenceR App</title>
-    <style>
-        body { margin: 0; padding: 0; }
-        #content { width: 100%; height: 100vh; border: none; }
-    </style>
-    <link rel="icon" href="data:,"> <!-- Disable favicon -->
+    <style>#content { width: 100%; height: 100vh; border: none; }</style>
+    <link rel="icon" href="data:,">
 </head>
 <body>
     <div id="content"></div>
     <script>
-        // Configuration
         const proxyUrl = 'https://api.allorigins.win/raw?url=';
         const targetServer = 'http://92.205.57.115';
-        
-        // Fetch and rewrite content
+
+        // Fetch main HTML
         fetch(proxyUrl + encodeURIComponent(targetServer))
             .then(response => response.text())
             .then(html => {
-                // Rewrite ALL asset URLs to use the proxy
+                // Rewrite asset URLs with explicit MIME types
                 const fixedHtml = html
-                    // Replace HTTP URLs in src/href attributes
-                    .replace(/(src|href)="http:\/\/92\.205\.57\.115\/(.*?)"/g, (_, attr, path) => {
-                        return `${attr}="${proxyUrl}${encodeURIComponent(targetServer + '/' + path)}"`;
+                    .replace(/<script src="(\/assets\/.*?\.js)"/g, (_, path) => {
+                        const fullUrl = `${targetServer}${path}`;
+                        return `<script src="${proxyUrl}${encodeURIComponent(fullUrl)}" type="application/javascript"`;
                     })
-                    // Replace relative paths (/assets/...) with proxy URLs
-                    .replace(/(src|href)="\/(.*?)"/g, (_, attr, path) => {
-                        return `${attr}="${proxyUrl}${encodeURIComponent(targetServer + '/' + path)}"`;
-                    })
-                    // Fix CSS url() references
-                    .replace(/url\(\/(.*?)\)/g, (_, path) => {
-                        return `url(${proxyUrl}${encodeURIComponent(targetServer + '/' + path)})`;
+                    .replace(/<link rel="stylesheet" href="(\/assets\/.*?\.css)"/g, (_, path) => {
+                        const fullUrl = `${targetServer}${path}`;
+                        return `<link rel="stylesheet" href="${proxyUrl}${encodeURIComponent(fullUrl)}" type="text/css"`;
                     });
 
                 document.getElementById('content').innerHTML = fixedHtml;
             })
             .catch(err => {
                 document.getElementById('content').innerHTML = `
-                    <h1>Error Loading Content</h1>
-                    <p>Please try again later. Technical details: ${err.message}</p>
+                    <h1>Error</h1>
+                    <p>${err.message}</p>
                 `;
             });
     </script>
