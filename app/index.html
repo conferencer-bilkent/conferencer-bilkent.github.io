@@ -6,31 +6,40 @@
         body { margin: 0; padding: 0; }
         #content { width: 100%; height: 100vh; border: none; }
     </style>
-    <!-- Add favicon to avoid 404 -->
-    <link rel="icon" href="data:,"> 
+    <link rel="icon" href="data:,"> <!-- Disable favicon -->
 </head>
 <body>
     <div id="content"></div>
     <script>
-        // Use a reliable proxy
+        // Configuration
         const proxyUrl = 'https://api.allorigins.win/raw?url=';
-        const targetUrl = encodeURIComponent('http://92.205.57.115/');
-
-        fetch(proxyUrl + targetUrl)
+        const targetServer = 'http://92.205.57.115';
+        
+        // Fetch and rewrite content
+        fetch(proxyUrl + encodeURIComponent(targetServer))
             .then(response => response.text())
             .then(html => {
-                // Fix relative paths in the fetched HTML
-                const baseUrl = 'http://92.205.57.115/';
+                // Rewrite ALL asset URLs to use the proxy
                 const fixedHtml = html
-                    .replace(/src="\//g, `src="${baseUrl}`)
-                    .replace(/href="\//g, `href="${baseUrl}`);
+                    // Replace HTTP URLs in src/href attributes
+                    .replace(/(src|href)="http:\/\/92\.205\.57\.115\/(.*?)"/g, (_, attr, path) => {
+                        return `${attr}="${proxyUrl}${encodeURIComponent(targetServer + '/' + path)}"`;
+                    })
+                    // Replace relative paths (/assets/...) with proxy URLs
+                    .replace(/(src|href)="\/(.*?)"/g, (_, attr, path) => {
+                        return `${attr}="${proxyUrl}${encodeURIComponent(targetServer + '/' + path)}"`;
+                    })
+                    // Fix CSS url() references
+                    .replace(/url\(\/(.*?)\)/g, (_, path) => {
+                        return `url(${proxyUrl}${encodeURIComponent(targetServer + '/' + path)})`;
+                    });
+
                 document.getElementById('content').innerHTML = fixedHtml;
             })
             .catch(err => {
-                console.error('Error:', err);
                 document.getElementById('content').innerHTML = `
                     <h1>Error Loading Content</h1>
-                    <p>Try reloading the page. If the issue persists, the server may be offline.</p>
+                    <p>Please try again later. Technical details: ${err.message}</p>
                 `;
             });
     </script>
