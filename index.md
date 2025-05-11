@@ -5,6 +5,22 @@ title: "Conferencer"
 
 # Welcome to Conferencer 🚀
 
+<a href="http://92.205.57.115/" style="
+    display: inline-block;
+    padding: 15px 30px;
+    background: #2F80ED;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 20px 0;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+" onmouseover="this.style.transform='scale(1.05)'" 
+onmouseout="this.style.transform='scale(1)'">
+    Launch Conferencer Web App ➔
+</a>
+
 We are building a user-friendly conference management system. Explore what we do below!
 
 ---
@@ -64,4 +80,4 @@ At Conferencer, we believe in empowering academic organizers with a seamless, in
 
 ---
 
-### © 2024 Conferencer
+### © 2025 Conferencer
