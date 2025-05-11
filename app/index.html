@@ -3,33 +3,11 @@
 <head>
     <title>ConferenceR App</title>
     <style>
-        body { margin: 0; padding: 0; }
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
         iframe { width: 100%; height: 100vh; border: none; }
     </style>
 </head>
 <body>
-    <iframe id="contentFrame" src="about:blank"></iframe>
-    
-    <script>
-        // Use a CORS proxy to fetch the content
-        const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-        const targetUrl = 'http://92.205.57.115/';
-        
-        fetch(proxyUrl + targetUrl)
-            .then(response => response.text())
-            .then(html => {
-                const frame = document.getElementById('contentFrame');
-                frame.srcdoc = html;
-            })
-            .catch(err => {
-                document.getElementById('contentFrame').srcdoc = `
-                    <html><body style="padding: 20px; font-family: Arial;">
-                        <h2>Content Load Error</h2>
-                        <p>Could not load content from ${targetUrl}</p>
-                        <p>Error: ${err.message}</p>
-                    </body></html>
-                `;
-            });
-    </script>
+    <iframe src="http://92.205.57.115/"></iframe>
 </body>
 </html>
