@@ -2,12 +2,27 @@
 <html>
 <head>
     <title>ConferenceR App</title>
-    <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-        iframe { width: 100%; height: 100vh; border: none; }
-    </style>
+    <style> iframe, #content { width: 100%; height: 100vh; border: none; } </style>
 </head>
 <body>
-    <iframe src="http://92.205.57.115/"></iframe>
+    <div id="content"></div>
+    <script>
+        // Step 1: Use a CORS proxy to convert HTTP → HTTPS
+        const proxyUrl = 'https://corsproxy.io/?';
+        const targetUrl = encodeURIComponent('http://92.205.57.115/');
+
+        fetch(proxyUrl + targetUrl)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('content').innerHTML = html;
+            })
+            .catch(err => {
+                // Fallback to iframe if fetch fails
+                document.getElementById('content').innerHTML = `
+                    <iframe src="${targetUrl}"></iframe>
+                    <p>If the content doesn't load, check the browser console.</p>
+                `;
+            });
+    </script>
 </body>
 </html>
