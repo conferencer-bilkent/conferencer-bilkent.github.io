@@ -2,25 +2,35 @@
 <html>
 <head>
     <title>ConferenceR App</title>
-    <style> iframe, #content { width: 100%; height: 100vh; border: none; } </style>
+    <style>
+        body { margin: 0; padding: 0; }
+        #content { width: 100%; height: 100vh; border: none; }
+    </style>
+    <!-- Add favicon to avoid 404 -->
+    <link rel="icon" href="data:,"> 
 </head>
 <body>
     <div id="content"></div>
     <script>
-        // Step 1: Use a CORS proxy to convert HTTP → HTTPS
-        const proxyUrl = 'https://corsproxy.io/?';
+        // Use a reliable proxy
+        const proxyUrl = 'https://api.allorigins.win/raw?url=';
         const targetUrl = encodeURIComponent('http://92.205.57.115/');
 
         fetch(proxyUrl + targetUrl)
             .then(response => response.text())
             .then(html => {
-                document.getElementById('content').innerHTML = html;
+                // Fix relative paths in the fetched HTML
+                const baseUrl = 'http://92.205.57.115/';
+                const fixedHtml = html
+                    .replace(/src="\//g, `src="${baseUrl}`)
+                    .replace(/href="\//g, `href="${baseUrl}`);
+                document.getElementById('content').innerHTML = fixedHtml;
             })
             .catch(err => {
-                // Fallback to iframe if fetch fails
+                console.error('Error:', err);
                 document.getElementById('content').innerHTML = `
-                    <iframe src="${targetUrl}"></iframe>
-                    <p>If the content doesn't load, check the browser console.</p>
+                    <h1>Error Loading Content</h1>
+                    <p>Try reloading the page. If the issue persists, the server may be offline.</p>
                 `;
             });
     </script>
