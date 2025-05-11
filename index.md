@@ -64,4 +64,4 @@ At Conferencer, we believe in empowering academic organizers with a seamless, in
 
 ---
 
-### © 2024 Conferencer
+### © 2025 Conferencer
