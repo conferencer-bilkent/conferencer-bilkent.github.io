@@ -45,25 +45,27 @@ At Conferencer, we believe in empowering academic organizers with a seamless, in
 <div>
   <h3>📽️ Jump to a Scenario</h3>
   <ul>
-    <li><a href="#" onclick="seekVideo(0)">Create conference</a></li>
-    <li><a href="#" onclick="seekVideo(27)">Invite people</a></li>
-    <li><a href="#" onclick="seekVideo(41)">Accept invitation</a></li>
-    <li><a href="#" onclick="seekVideo(55)">Assign a new superchair</a></li>
-    <li><a href="#" onclick="seekVideo(107)">Create a new track</a></li>
-    <li><a href="#" onclick="seekVideo(135)">Add people to track</a></li>
-    <li><a href="#" onclick="seekVideo(146)">View/edit profile</a></li>
-    <li><a href="#" onclick="seekVideo(183)">Assign a track chair</a></li>
-    <li><a href="#" onclick="seekVideo(195)">Conference overview</a></li>
-    <li><a href="#" onclick="seekVideo(255)">View reviews</a></li>
-    <li><a href="#" onclick="seekVideo(267)">Change decision</a></li>
-    <li><a href="#" onclick="seekVideo(277)">Conflict</a></li>
-    <li><a href="#" onclick="seekVideo(300)">Assign paper</a></li>
-    <li><a href="#" onclick="seekVideo(320)">Trackchair view</a></li>
-    <li><a href="#" onclick="seekVideo(337)">My tasks and make review</a></li>
-    <li><a href="#" onclick="seekVideo(375)">Trackchair read review and make decision</a></li>
-    <li><a href="#" onclick="seekVideo(405)">Review rating</a></li>
-    <li><a href="#" onclick="seekVideo(439)">Chat and reply</a></li>
-    <li><a href="#" onclick="seekVideo(461)">See my submissions</a></li>
+<ul>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(0);">Create conference</a></li>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(27);">Invite people</a></li>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(41);">Accept invitation</a></li>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(55);">Assign a new superchair</a></li>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(107);">Create a new track</a></li>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(135);">Add people to track</a></li>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(146);">View/edit profile</a></li>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(183);">Assign a track chair</a></li>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(195);">Conference overview</a></li>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(255);">View reviews</a></li>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(267);">Change decision</a></li>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(277);">Conflict</a></li>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(300);">Assign paper</a></li>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(320);">Trackchair view</a></li>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(337);">My tasks and make review</a></li>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(375);">Trackchair read review and make decision</a></li>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(405);">Review rating</a></li>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(439);">Chat and reply</a></li>
+  <li><a href="#" onclick="event.preventDefault(); seekVideo(461);">See my submissions</a></li>
+</ul>
   </ul>
 </div>
 
