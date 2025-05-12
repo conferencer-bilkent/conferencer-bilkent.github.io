@@ -5,13 +5,13 @@ title: "Conferencer"
 
 # Welcome to Conferencer 🚀
 
-We are building a user-friendly conference management system. Explore what we do below!
+A modern, intuitive, and scalable platform for academic conference management. Explore the future of conference organization!
 
 ---
 
 ## About Us
 
-Welcome to Conferencer, your go-to platform for simplifying academic conference management!
+Conferencer is a comprehensive web-based platform designed to streamline and elevate the management of academic conferences. By focusing on flexibility, security, and user experience, it empowers organizers, reviewers, and authors to collaborate efficiently across every stage—from submission to decision-making.
 
 ---
 
@@ -23,11 +23,17 @@ At Conferencer, we believe in empowering academic organizers with a seamless, in
 
 ## Features
 
-- 🔍 **Advanced Filtering:** Find reviewers and submissions effortlessly using customizable filters.
-- 📊 **Detailed Insights:** Gain comprehensive statistics about users, reviewers, and conference outcomes.
-- 📅 **Multi-Track Event Management:** Easily organize complex, multi-track conference schedules.
-- 💼 **Reviewer Assigners:** Streamline reviewer assignment based on assignee statistics.
-- 🤖 **LLM Fraud Detection:** Protect the integrity of your conference with AI-powered fraud detection.
+- 🔒 **Role-Based Access Control:** Secure permissions for authors, reviewers, chairs, and admins.
+- 🔐 **Authentication & Integrations:** Login with email or Google accounts. Integration with ORCID and academic databases.
+- 🛠️ **Modular Architecture:** Built with React, Flask, and MongoDB—scalable, secure, and efficient.
+- 📄 **Streamlined Submissions:** Easy uploading, tracking, compliance checks, and version control.
+- 📌 **Program Committee Management:** Smart invitations, historical performance metrics, and conflict-of-interest detection.
+- 📈 **Reviewer Assignment Engine:** Automated matching based on expertise, past performance, and similarity analysis.
+- 📊 **Review Analytics & Ratings:** Track reviewer performance, feedback quality, and historical contributions.
+- 🧩 **Multi-Track Conference Handling:** Independent track configuration with shared or isolated reviewer pools.
+- 🔁 **Real-Time Collaboration:** Integrated chat, notifications, and review discussion features.
+- 🎯 **My Tasks Dashboard:** Personalized views of submissions, reviews, and deadlines for each user.
+- 🧠 **AI-Powered Review Detection (Future Plan):** NLP tools to detect LLM-generated content and preserve review authenticity.
 
 ---
 
@@ -76,6 +82,34 @@ At Conferencer, we believe in empowering academic organizers with a seamless, in
     video.play();
   }
 </script>
+
+---
+
+## Technology Stack
+
+| Component        | Technology                      |
+| ---------------- | ------------------------------- |
+| Frontend         | React (TypeScript, Context API) |
+| Backend          | Flask (Python), Flask-RESTful   |
+| Database         | MongoDB                         |
+| Authentication   | Session-based + Google OAuth    |
+| Containerization | Docker                          |
+| Web Server       | Nginx                           |
+| Hosting          | Ubuntu VPS                      |
+| Tools            | Git, GitHub, Jira, VS Code      |
+
+---
+
+## System Architecture
+
+Conferencer uses a modular and scalable architecture:
+
+- **Frontend (React)**: Provides a dynamic and responsive user interface with real-time interactions.
+- **Backend (Flask)**: Handles business logic, API endpoints, security, and communication between modules.
+- **Database (MongoDB)**: Stores user data, submissions, reviews, and statistics in a flexible document-based format.
+- **Access Control**: Implements secure, role-based access through session management and HTTPS.
+- **Containerized Services**: Each component runs in Docker for portability and consistent environments.
+- **Reverse Proxy (Nginx)**: Routes client requests securely and efficiently to backend services.
 
 ---
 
