@@ -43,7 +43,7 @@ At Conferencer, we believe in empowering academic organizers with a seamless, in
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; margin: 20px 0;">
   <video id="demoVideo" controls style="width: 100%; border-radius: 8px; margin: 20px 0;">
-    <source src="assets/0511_Com.mp4" type="video/mp4">
+    <source src="demo.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
